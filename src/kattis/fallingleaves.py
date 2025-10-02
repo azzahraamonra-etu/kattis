@@ -11,7 +11,6 @@ def fallingleaves(input_lines: list[str]) -> list[str]:
     """
 
     def build_bst_and_preorder(tree_data):
-        tree_data = tree_data[::-1]
         root = None
         for level in tree_data:
             for ch in level:

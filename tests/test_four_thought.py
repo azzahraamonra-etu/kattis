@@ -5,8 +5,8 @@ def test_four_thought():
     assert any(expr == "4 + 4 + 4 + 4 = 16" for expr in results) or \
            any(expr == "4 / 4 * 4 * 4 = 16" for expr in results)
 
-    assert "4 * 4 - 4 - 4 = 12" in four_thought([12])
-    
+    assert "no solution" in four_thought([12])
+
     # Test with multiple numbers, some solvable, some not
     results = four_thought([9, 7, 0])
     assert any("= 9" in res for res in results)
