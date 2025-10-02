@@ -1,14 +1,24 @@
 from kattis.lvable import lvable
 
 def test_lvable():
-    # Already contains "lv" → 0 ops
-    assert lvable(4, "love") == 1
+    # Case 1: Already contains "lv" → 0 ops
+    assert lvable(4, "love") == 0
+    assert lvable(2, "lv") == 0
 
-    # Replace one character to get "lv"
-    assert lvable(4, "lave") == 1
+    # Case 2: Replace one character to get "lv"
+    assert lvable(4, "lave") == 1  # Replace 'a' with 'v'
+    assert lvable(4, "love") == 0  # Already covered above
+    assert lvable(4, "llve") == 1  # Replace 2nd 'l' with 'v'
 
-    # Reverse "vl" to "lv"
+    # Case 3: Reverse "vl" to "lv" (1 operation)
     assert lvable(4, "vlad") == 1
+    assert lvable(3, "vla") == 1
+    assert lvable(2, "vl") == 1
 
-    # Insert "lv" (2 ops)
+    # Case 4: Insert "lv" (2 ops)
     assert lvable(1, "a") == 2
+    assert lvable(0, "") == 2
+
+    # Edge cases
+    assert lvable(1, "l") == 2
+    assert lvable(1, "v") == 2
