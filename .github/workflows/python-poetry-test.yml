@@ -11,22 +11,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-    - name: Set up Python
-    uses: actions/setup-python@v4
-    with:
-        python-version: '3.12'  # match >=3.11 as in your pyproject.toml
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'  # match >=3.11 as in your pyproject.toml
 
-    - name: Install Poetry
-      run: |
-        curl -sSL https://install.python-poetry.org | python3 -
-        echo "$HOME/.local/bin" >> $GITHUB_PATH
-    - name: Configure Poetry to use correct Python
-    run: |
-        poetry env use python3.12
-    - name: Install dependencies
-      run: poetry install
+      - name: Install Poetry
+        run: |
+          curl -sSL https://install.python-poetry.org | python3 -
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
 
-    - name: Run tests with pytest
-      run: poetry run pytest
+      - name: Configure Poetry to use correct Python
+        run: |
+          poetry env use python3.12
+
+      - name: Install dependencies
+        run: poetry install
+
+      - name: Run tests with pytest
+        run: poetry run pytest
