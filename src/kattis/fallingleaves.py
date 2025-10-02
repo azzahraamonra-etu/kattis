@@ -1,16 +1,6 @@
 def fallingleaves(input_lines: list[str]) -> list[str]:
-    """
-    Solves the fallingleaves problem from Kattis.
-    URL: https://open.kattis.com/problems/fallingleaves
-
-    Args:
-    input_lines (list[str]): List of input lines, containing tree levels and commands.
-
-    Returns:
-    list[str]: List of preorder traversals of constructed BSTs after each '*' or '$' command.
-    """
-
     def build_bst_and_preorder(tree_data):
+        # Remove reversal, insert in input order
         root = None
         for level in tree_data:
             for ch in level:
