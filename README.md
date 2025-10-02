@@ -1,0 +1,1 @@
+![Coverage Badge](coverage.svg)
