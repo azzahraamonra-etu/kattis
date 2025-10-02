@@ -1,9 +1,9 @@
 [project]
 name = "kattis"
 version = "0.1.0"
-description = ""
+description = "My collection of Kattis problem solutions"
 authors = [
-    {name = "azzahramona",email = "azzahramona@gmail.com"}
+    {name = "azzahraamonra-etu",email = "ehtaugakandia@gmail.com"}
 ]
 readme = "README.md"
 requires-python = ">=3.11"
