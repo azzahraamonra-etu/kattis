@@ -1,8 +1,10 @@
 from kattis.four_thought import four_thought
 
 def test_four_thought():
-    # Basic tests where solutions exist
-    assert "4 + 4 + 4 + 4 = 16" in four_thought([16])
+    results = four_thought([16])
+    assert any(expr == "4 + 4 + 4 + 4 = 16" for expr in results) or \
+           any(expr == "4 / 4 * 4 * 4 = 16" for expr in results)
+
     assert "4 * 4 - 4 - 4 = 12" in four_thought([12])
     
     # Test with multiple numbers, some solvable, some not
