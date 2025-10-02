@@ -9,7 +9,7 @@ def test_lvable():
 
     # Case 2: Replace one character to get "lv"
     assert lvable(4, "lave") == 1  # Replace 'a' with 'v'
-    assert lvable(4, "llve") == 1  # Replace 2nd 'l' with 'v'
+    assert lvable(4, "llve") == 0  # Replace 2nd 'l' with 'v'
 
     # Case 3: Reverse "vl" to "lv" (1 operation)
     assert lvable(4, "vlad") == 1
