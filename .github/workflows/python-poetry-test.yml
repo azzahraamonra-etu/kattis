@@ -29,22 +29,20 @@ jobs:
 
       - name: Install dependencies
         run: poetry install
-
       - name: Run tests and collect coverage
         run: |
           poetry run coverage run -m pytest
           poetry run coverage report -m
+
       - name: Generate coverage badge
         uses: tj-actions/coverage-badge-py@v2
         with:
           output: coverage.svg
 
       - name: Commit and push coverage badge
-      run: |
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
-        git add coverage.svg
-        git commit -m "chore: update coverage badge" || echo "No changes to commit"
-        git push
-
-
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add coverage.svg
+          git commit -m "chore: update coverage badge" || echo "No changes to commit"
+          git push
