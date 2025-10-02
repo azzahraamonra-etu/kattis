@@ -9,4 +9,4 @@ def goingnuts(n: int) -> int:
     Returns:
     int: The count of set bits (1s) in the binary representation of n.
     """
-    return bin(n).count('1')
+    return bin(n).count("1")

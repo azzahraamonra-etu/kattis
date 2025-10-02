@@ -14,15 +14,15 @@ def lvable(n: int, s: str) -> int:
     if "lv" in s:
         return 0
 
-    min_ops = float('inf')
+    min_ops = float("inf")
 
     # Case 2: Can we replace one character to make "lv"?
     for i in range(n - 1):
-        a, b = s[i], s[i+1]
+        a, b = s[i], s[i + 1]
         cost = 0
-        if a != 'l':
+        if a != "l":
             cost += 1
-        if b != 'v':
+        if b != "v":
             cost += 1
         min_ops = min(min_ops, cost)
 

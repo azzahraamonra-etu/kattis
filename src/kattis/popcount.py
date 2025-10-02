@@ -9,4 +9,4 @@ def popcount(n: str) -> int:
     Returns:
     int: Number of '1's in the string.
     """
-    return n.count('1')
+    return n.count("1")

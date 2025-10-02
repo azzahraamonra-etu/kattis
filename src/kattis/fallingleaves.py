@@ -22,7 +22,7 @@ def fallingleaves(input_lines: list[str]) -> list[str]:
 
         # Preorder traversal
         stack = [root]
-        result = ''
+        result = ""
         while stack:
             node = stack.pop()
             if node:
@@ -35,12 +35,12 @@ def fallingleaves(input_lines: list[str]) -> list[str]:
     results = []
 
     for line in input_lines:
-        if line == '$':
+        if line == "$":
             if tree_data:
                 results.append(build_bst_and_preorder(tree_data))
                 tree_data = []
             break
-        elif line == '*':
+        elif line == "*":
             results.append(build_bst_and_preorder(tree_data))
             tree_data = []
         else:

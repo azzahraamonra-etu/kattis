@@ -28,7 +28,7 @@ def favourable(T: int, test_cases: list[list[str]]) -> list[int]:
             index += 1
 
             page = int(parts[0])
-            if parts[1] in ['favourably', 'catastrophically']:
+            if parts[1] in ["favourably", "catastrophically"]:
                 endings[page] = parts[1]
             else:
                 graph[page] = list(map(int, parts[1:]))
@@ -39,7 +39,7 @@ def favourable(T: int, test_cases: list[list[str]]) -> list[int]:
             if page in memo:
                 return memo[page]
             if page in endings:
-                return 1 if endings[page] == 'favourably' else 0
+                return 1 if endings[page] == "favourably" else 0
             total = 0
             for next_page in graph.get(page, []):
                 total += dfs(next_page)

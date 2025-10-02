@@ -1,5 +1,6 @@
 from itertools import product
 
+
 def four_thought(test_cases: list[int]) -> list[str]:
     """
     Solves the 4thought problem from Kattis.
@@ -12,7 +13,7 @@ def four_thought(test_cases: list[int]) -> list[str]:
     list[str]: List of strings with either the expression that equals
                the number or "no solution" if none exists.
     """
-    ops = ['+', '-', '*', '/']
+    ops = ["+", "-", "*", "/"]
     expr_map = {}
 
     # Precompute all possible expressions using 4 fours and the four ops
@@ -20,7 +21,7 @@ def four_thought(test_cases: list[int]) -> list[str]:
         expr = f"4 {o1} 4 {o2} 4 {o3} 4"
         try:
             # Evaluate with integer division for '/'
-            result = eval(expr.replace('/', '//'))
+            result = eval(expr.replace("/", "//"))
             expr_map[result] = expr
         except ZeroDivisionError:
             continue
