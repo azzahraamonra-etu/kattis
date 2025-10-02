@@ -23,4 +23,4 @@ jobs:
         run: poetry install
 
       - name: Run PyLint
-        run: poetry run pylint your_package_or_module/
+        run: poetry run pylint kattis
