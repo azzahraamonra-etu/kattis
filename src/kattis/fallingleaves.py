@@ -3,7 +3,7 @@
 def fallingleaves(input_lines: list[str]) -> list[str]:
     """
     Interleaves leaves column-wise across multiple rows. Each block is separated by '*'
-    and processing stops at '$'.
+    and processing stops at '$'
     """
     results = []
     block = []
