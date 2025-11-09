@@ -1,14 +1,11 @@
 """Module for solving the fallingleaves problem from Kattis."""
 
 def fallingleaves(input_lines: list[str]) -> list[str]:
-    """
-    Solve Falling Leaves: interleave columns of leaves from each row in a block.
-    """
     results = []
     block = []
 
     for line in input_lines:
-        if line == "*":
+        if line == '*':
             if block:
                 n_cols = len(block[0])
                 n_rows = len(block)
@@ -18,7 +15,7 @@ def fallingleaves(input_lines: list[str]) -> list[str]:
                         interleaved += block[row][col]
                 results.append(interleaved)
                 block = []
-        elif line == "$":
+        elif line == '$':
             if block:
                 n_cols = len(block[0])
                 n_rows = len(block)
@@ -32,3 +29,4 @@ def fallingleaves(input_lines: list[str]) -> list[str]:
             block.append(line)
 
     return results
+
