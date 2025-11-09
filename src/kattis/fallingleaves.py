@@ -16,8 +16,9 @@ def fallingleaves(input_lines: list[str]) -> list[str]:
         n_cols = len(b[0])
         n_rows = len(b)
         for col in range(n_cols):
-            for row in range(n_rows):
+            for row in range(n_rows - 1, -1, -1):  # bottom to top
                 interleaved += b[row][col]
+
         return interleaved
 
     for line in input_lines:
