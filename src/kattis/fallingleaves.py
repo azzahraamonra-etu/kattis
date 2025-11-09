@@ -1,32 +1,35 @@
 """Module for solving the fallingleaves problem from Kattis."""
 
 def fallingleaves(input_lines: list[str]) -> list[str]:
+    """
+    Interleaves leaves column-wise across multiple rows. Each block is separated by '*' 
+    and processing stops at '$'.
+    """
     results = []
     block = []
 
+    def process_block(b):
+        """Interleave a block of rows column-wise."""
+        if not b:
+            return ""
+        interleaved = ""
+        n_cols = len(b[0])
+        n_rows = len(b)
+        for col in range(n_cols):
+            for row in range(n_rows):
+                interleaved += b[row][col]
+        return interleaved
+
     for line in input_lines:
-        if line == '*':
+        if line == "*":
             if block:
-                n_cols = len(block[0])
-                n_rows = len(block)
-                interleaved = ""
-                for col in range(n_cols):
-                    for row in range(n_rows):
-                        interleaved += block[row][col]
-                results.append(interleaved)
+                results.append(process_block(block))
                 block = []
-        elif line == '$':
+        elif line == "$":
             if block:
-                n_cols = len(block[0])
-                n_rows = len(block)
-                interleaved = ""
-                for col in range(n_cols):
-                    for row in range(n_rows):
-                        interleaved += block[row][col]
-                results.append(interleaved)
+                results.append(process_block(block))
             break
         else:
             block.append(line)
 
     return results
-
