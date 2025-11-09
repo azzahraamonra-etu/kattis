@@ -3,8 +3,8 @@
 def fallingleaves(input_lines: list[str]) -> list[str]:
     """
     Interleaves leaves column-wise across multiple rows. Each block is separated by '*'
-    and processing stops at '$'.  Columns are read alternately top→bottom then
-    bottom→top, starting with top→bottom.
+    and processing stops at '$'.
+    Columns alternate direction starting with bottom→top.
     """
     results = []
     block = []
@@ -17,12 +17,12 @@ def fallingleaves(input_lines: list[str]) -> list[str]:
         n_rows = len(b)
         for col in range(n_cols):
             if col % 2 == 0:
-                # even column: top → bottom
-                for row in range(n_rows):
+                # even column: bottom → top
+                for row in range(n_rows - 1, -1, -1):
                     interleaved += b[row][col]
             else:
-                # odd column: bottom → top
-                for row in range(n_rows - 1, -1, -1):
+                # odd column: top → bottom
+                for row in range(n_rows):
                     interleaved += b[row][col]
         return interleaved
 
@@ -38,4 +38,5 @@ def fallingleaves(input_lines: list[str]) -> list[str]:
         else:
             block.append(line)
 
+    # Ensure blocks appear in input order (not reversed)
     return results
