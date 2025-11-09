@@ -1,28 +1,26 @@
-"""Module for solving the fallingleaves problem from Kattis."""
 def fallingleaves(input_lines: list[str]) -> list[str]:
     """
-    Processes input lines representing falling leaves and returns the combined 
-    strings for each tree block. Blocks are separated by '*' and processing stops at '$'.
+    Solve the Falling Leaves problem.
 
     Args:
-        input_lines (list[str]): Input lines ending with '*' (block separator) or '$' (end marker).
+        input_lines (list[str]): Lines of leaf data ending with '*' or '$'.
 
     Returns:
-        list[str]: Each string corresponds to a concatenated tree block.
+        list[str]: Each element is a reconstructed string per block.
     """
     results = []
-    tree_data = []
+    block = []
 
     for line in input_lines:
-        if line == '*':
-            if tree_data:
-                results.append(''.join(tree_data))
-                tree_data = []
-        elif line == '$':
-            if tree_data:
-                results.append(''.join(tree_data))
-            break
+        if line in ("*", "$"):
+            if block:
+                # Interleave columns of all rows in the block
+                transposed = [''.join(col) for col in zip(*block)]
+                results.append(''.join(transposed))
+                block = []
+            if line == "$":
+                break
         else:
-            tree_data.append(line)
+            block.append(line)
 
     return results

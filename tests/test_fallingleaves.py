@@ -1,26 +1,42 @@
-def fallingleaves(input_lines: list[str]) -> list[str]:
-    """
-    Solve the Falling Leaves problem.
+import pytest
+from src.kattis.fallingleaves import fallingleaves
 
-    Args:
-        input_lines (list[str]): Lines of leaf data ending with '*' or '$'.
+def test_single_block_star():
+    input_lines = [
+        "LLLR",
+        "LRLL",
+        "*"
+    ]
+    # Interleave columns
+    # L L L R
+    # L R L L
+    # Interleaving columns: L L → L, L R → L, L L → L, R L → R
+    expected = ["LLLRLRLL"]
+    assert fallingleaves(input_lines) == expected
 
-    Returns:
-        list[str]: Each element is a reconstructed string per block.
-    """
-    results = []
-    block = []
+def test_single_block_dollar():
+    input_lines = [
+        "LRLR",
+        "RLLR",
+        "$"
+    ]
+    expected = ["LRLRRLLR"]
+    assert fallingleaves(input_lines) == expected
 
-    for line in input_lines:
-        if line in ("*", "$"):
-            if block:
-                # Interleave columns of all rows in the block
-                transposed = [''.join(col) for col in zip(*block)]
-                results.append(''.join(transposed))
-                block = []
-            if line == "$":
-                break
-        else:
-            block.append(line)
+def test_multiple_blocks():
+    input_lines = [
+        "LL",
+        "RR",
+        "*",
+        "LR",
+        "RL",
+        "*",
+        "$"
+    ]
+    expected = ["LRLR", "LRRL"]  # Interleaving columns per block
+    assert fallingleaves(input_lines) == expected
 
-    return results
+def test_command_at_start():
+    input_lines = ["*", "LR"]
+    expected = []  # No data before first command
+    assert fallingleaves(input_lines) == expected
