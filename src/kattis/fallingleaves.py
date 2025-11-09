@@ -1,25 +1,33 @@
+"""Module for solving the fallingleaves problem from Kattis."""
+
 def fallingleaves(input_lines: list[str]) -> list[str]:
     """
-    Solve the Falling Leaves problem.
-
-    Args:
-        input_lines (list[str]): Lines of leaf data ending with '*' or '$'.
-
-    Returns:
-        list[str]: Each element is a reconstructed string per block.
+    Solve Falling Leaves: interleave columns of leaves from each row in a block.
     """
     results = []
     block = []
 
     for line in input_lines:
-        if line in ("*", "$"):
+        if line == "*":
             if block:
-                # Interleave columns of all rows in the block
-                transposed = [''.join(col) for col in zip(*block)]
-                results.append(''.join(transposed))
+                n_cols = len(block[0])
+                n_rows = len(block)
+                interleaved = ""
+                for col in range(n_cols):
+                    for row in range(n_rows):
+                        interleaved += block[row][col]
+                results.append(interleaved)
                 block = []
-            if line == "$":
-                break
+        elif line == "$":
+            if block:
+                n_cols = len(block[0])
+                n_rows = len(block)
+                interleaved = ""
+                for col in range(n_cols):
+                    for row in range(n_rows):
+                        interleaved += block[row][col]
+                results.append(interleaved)
+            break
         else:
             block.append(line)
 
