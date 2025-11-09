@@ -1,3 +1,5 @@
+"""Module for solving the counting problem from Kattis."""
+
 def counting(k: int) -> list[int]:
     """
     Solves the counting problem from Kattis.

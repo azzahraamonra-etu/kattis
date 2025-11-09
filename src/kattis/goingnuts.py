@@ -1,3 +1,5 @@
+"""Module for solving the goingnuts problem from Kattis."""
+
 def goingnuts(n: int) -> int:
     """
     Solves the goingnuts problem from Kattis.

@@ -1,3 +1,5 @@
+"""Module for solving the popcount problem from Kattis."""
+
 def popcount(n: str) -> int:
     """
     Solves the popcount problem from Kattis.

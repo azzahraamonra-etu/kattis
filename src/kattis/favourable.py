@@ -1,3 +1,5 @@
+"""Module for solving the favourable problem from Kattis."""
+
 import sys  
 
 def favourable(T: int, test_cases: list[list[str]]) -> list[int]:

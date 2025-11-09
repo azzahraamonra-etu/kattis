@@ -1,5 +1,6 @@
-from itertools import product
+"""Module for solving the four_thought problem from Kattis."""
 
+from itertools import product
 
 def four_thought(test_cases: list[int]) -> list[str]:
     """

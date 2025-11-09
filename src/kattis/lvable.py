@@ -1,3 +1,5 @@
+"""Module for solving the lvable problem from Kattis."""
+
 def lvable(n: int, s: str) -> int:
     """
     Solves the Lvable problem from Kattis.

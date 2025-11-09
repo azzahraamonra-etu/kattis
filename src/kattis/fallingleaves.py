@@ -1,3 +1,5 @@
+"""Module for solving the fallingleaves problem from Kattis."""
+
 def fallingleaves(input_lines: list[str]) -> list[str]:
     def build_bst_and_preorder(tree_data):
         # Remove reversal, insert in input order

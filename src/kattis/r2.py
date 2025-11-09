@@ -1,3 +1,5 @@
+"""Module for solving the R2 problem from Kattis."""
+
 def r2(n: int, average: int) -> int:
     """
     Solves the r2 problem from Kattis.
