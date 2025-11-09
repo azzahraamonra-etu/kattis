@@ -9,16 +9,16 @@ def fallingleaves(input_lines: list[str]) -> list[str]:
     block = []
 
     def process_block(b):
-        """Interleave a block of rows column-wise."""
+        """Interleave a block of rows column-wise (top-to-bottom per column)."""
         if not b:
             return ""
+        b = list(reversed(b))  # Reverse rows so the first line is the bottom one
         interleaved = ""
         n_cols = len(b[0])
         n_rows = len(b)
         for col in range(n_cols):
-            for row in range(n_rows - 1, -1, -1):  # bottom to top
+            for row in range(n_rows):
                 interleaved += b[row][col]
-
         return interleaved
 
     for line in input_lines:
