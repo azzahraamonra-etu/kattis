@@ -4,7 +4,7 @@ def fallingleaves(input_lines: list[str]) -> list[str]:
     """
     Interleaves leaves column-wise across multiple rows. Each block is separated by '*'
     and processing stops at '$'.
-    Columns are read left→right, each column top→bottom.
+    Columns are read left→right, each column bottom→top.
     """
     results = []
     block = []
@@ -16,9 +16,9 @@ def fallingleaves(input_lines: list[str]) -> list[str]:
         n_cols = len(b[0])
         n_rows = len(b)
 
-        # FIX: process columns from left to right
+        # Read columns left→right, each bottom→top
         for col in range(n_cols):
-            for row in range(n_rows):
+            for row in range(n_rows - 1, -1, -1):  # bottom to top
                 interleaved += b[row][col]
         return interleaved
 
