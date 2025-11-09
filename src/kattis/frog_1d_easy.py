@@ -1,3 +1,5 @@
+"""Module for solving the Frog 1D Easy problem from Kattis."""
+
 def frog_1d_easy(n: int, s: int, m: int, board: list[int]) -> tuple[str, int]:
     """
     Solves the 1D Frog Easy problem from Kattis.
@@ -28,6 +30,6 @@ def frog_1d_easy(n: int, s: int, m: int, board: list[int]) -> tuple[str, int]:
         hops += 1
         if next_pos < 0:
             return ("left", hops)
-        elif next_pos >= n:
+        if next_pos >= n:
             return ("right", hops)
         pos = next_pos

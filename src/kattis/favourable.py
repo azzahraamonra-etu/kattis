@@ -1,3 +1,5 @@
+import sys  
+
 def favourable(T: int, test_cases: list[list[str]]) -> list[int]:
     """
     Solves the favourable problem from Kattis.
