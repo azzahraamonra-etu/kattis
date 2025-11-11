@@ -1,0 +1,141 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.17.7"
+  },
+  "cells": [
+    {
+      "id": "MJUe",
+      "code_hash": "96e0458636fe76a3948bd3b579c3542e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h1 id=\"demo-thirteen-floors\">Demo: Thirteen Floors</h1>\n<span class=\"paragraph\">This notebook explores the distribution of building floor numbers, focusing on the phenomenon of missing 13th floors in buildings due to superstition. We'll use a simulated dataset to analyze and visualize the data.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "bkHC",
+      "code_hash": "a5c1260a8d4fd3644ea88466bbf0d7b5",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"data-explorer\">Data Explorer</h2>\n<span class=\"paragraph\">Explore the simulated building floors dataset below. Notice that the 13th floor is missing from all buildings.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "PKri",
+      "code_hash": "00fa6d86592212c253e96c94cf6d57b7",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"floor-distribution-visualization\">Floor Distribution Visualization</h2>\n<span class=\"paragraph\">Select a floor number to see how many buildings have that floor (excluding the 13th floor).</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Kclp",
+      "code_hash": "0e234709f272f77b74f6ff6c9e93788b",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"altair-interactive-visualization\">Altair Interactive Visualization</h2>\n<span class=\"paragraph\">Use the slider to highlight a specific floor in the distribution.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "nWHF",
+      "code_hash": "057780e2cd9ae4e4da7a678cece96074",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"conclusion\">Conclusion</h2>\n<span class=\"paragraph\">This demo illustrates how the 13th floor is systematically omitted from building floor numbering, a practice rooted in superstition. The interactive tools above allow you to explore the impact of this omission on floor distributions.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Hbol",
+      "code_hash": "5b4d12bab232b99a59bade38d622f578",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "No module named 'matplotlib'",
+          "traceback": []
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "<span class=\"codehilite\"><div class=\"highlight\"><pre><span></span><span class=\"gt\">Traceback (most recent call last):</span>\n  File <span class=\"nb\">&quot;C:\\Users\\azzah\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\kattis-DoM7rMw1-py3.11\\Lib\\site-packages\\marimo\\_runtime\\executor.py&quot;</span>, line <span class=\"m\">138</span>, in <span class=\"n\">execute_cell</span>\n<span class=\"w\">    </span><span class=\"n\">exec</span><span class=\"p\">(</span><span class=\"n\">cell</span><span class=\"o\">.</span><span class=\"n\">body</span><span class=\"p\">,</span> <span class=\"n\">glbls</span><span class=\"p\">)</span>\n  File <span class=\"nb\">&quot;C:\\Users\\azzah\\AppData\\Local\\Temp\\marimo_28156\\__marimo__cell_Hbol_.py&quot;</span>, line <span class=\"m\">3</span>, in <span class=\"n\">&lt;module&gt;</span>\n<span class=\"w\">    </span><span class=\"kn\">import</span><span class=\"w\"> </span><span class=\"nn\">matplotlib.pyplot</span><span class=\"w\"> </span><span class=\"k\">as</span><span class=\"w\"> </span><span class=\"nn\">plt</span>\n<span class=\"gr\">ModuleNotFoundError</span>: <span class=\"n\">No module named &#39;matplotlib&#39;</span>\n</pre></div>\n</span>",
+          "mimetype": "application/vnd.marimo+traceback"
+        }
+      ]
+    },
+    {
+      "id": "vblA",
+      "code_hash": "f512fff2cb5a6df41fd422b5abcce52c",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "lEQa",
+      "code_hash": "83331f2d33452a932afdf4058f17b9a1",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "Xref",
+      "code_hash": "c8d675c41ef18ab744ed3f7c13fcceab",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "SFPL",
+      "code_hash": "2f79a2fa5ca6b1cb32af30be7d7f5338",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "BYtC",
+      "code_hash": "8fb6867b147f49bbf6a25c7702ae513c",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "RGSE",
+      "code_hash": "70d262028e7adf65644d83d47b1fc18f",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "emfo",
+      "code_hash": "d9abd812a8b2a7606b3d6f97bf31d7ac",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "Hstk",
+      "code_hash": "acf9940d6b20ca1abea3dc9e33266a76",
+      "outputs": [],
+      "console": []
+    }
+  ]
+}
