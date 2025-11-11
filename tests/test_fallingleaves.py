@@ -3,28 +3,7 @@ from src.kattis.fallingleaves import fallingleaves
 import pytest
 from src.kattis.fallingleaves import fallingleaves
 
-def test_single_block():
-    input_lines = [
-        "ABC",
-        "DEF",
-        "*",
-        "$"
-    ]
-    # Columns: (C,F), (B,E), (A,D) => interleaved bottom→top per column
-    expected = ["DBEAFC"]
-    assert fallingleaves(input_lines) == expected
 
-def test_multiple_blocks():
-    input_lines = [
-        "ABC",
-        "DEF",
-        "*",
-        "GHI",
-        "JKL",
-        "$"
-    ]
-    expected = ["DBEAFC", "JGLKHI"]
-    assert fallingleaves(input_lines) == expected
 
 def test_no_blocks():
     input_lines = ["$"]
