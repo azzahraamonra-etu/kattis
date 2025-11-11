@@ -2,7 +2,6 @@ import pytest
 from src.kattis.fallingleaves import fallingleaves
 import pytest
 from src.kattis.fallingleaves import fallingleaves
-from fallingleaves import fallingleaves
 
 def test_single_block():
     input_lines = [
