@@ -1,9 +1,8 @@
 import pytest
-# The line `from kattisfallingleaves import fallingleaves` is importing the `fallingleaves` function
-# from a module named `kattisfallingleaves`. This allows the test script to use the `fallingleaves`
-# function defined in the `kattisfallingleaves` module for testing purposes.
-
-from kattis.fallingleaves import fallingleaves
+from src.kattis.fallingleaves import fallingleaves
+import pytest
+from src.kattis.fallingleaves import fallingleaves
+from fallingleaves import fallingleaves
 
 def test_single_block():
     input_lines = [
