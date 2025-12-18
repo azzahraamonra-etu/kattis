@@ -1,0 +1,41 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.17.7"
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "82acca297f80538fb3017df2d047b2ff",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><span class=\"markdown prose dark:prose-invert contents\"><h1 id=\"interactive-kattis-solver\">Interactive Kattis Solver</h1></span><div style='display: flex;flex: 1;flex-direction: row;justify-content: flex-start;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><marimo-ui-element object-id='Hbol-0' random-id='f0dd506e-7a12-e7a8-8e5b-85b4872a5d75'><marimo-dropdown data-initial-value='[&quot;R2&quot;]' data-label='&quot;&lt;span class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&gt;&lt;span class=&#92;&quot;paragraph&#92;&quot;&gt;Select Problem:&lt;/span&gt;&lt;/span&gt;&quot;' data-options='[&quot;Counting&quot;,&quot;Falling Leaves&quot;,&quot;Favourable&quot;,&quot;Four Thought&quot;,&quot;Frog 1D Easy&quot;,&quot;Going Nuts&quot;,&quot;Lvable&quot;,&quot;Popcount&quot;,&quot;R2&quot;,&quot;Thirteen Floors&quot;]' data-allow-select-none='false' data-searchable='false' data-full-width='false'></marimo-dropdown></marimo-ui-element></div><marimo-ui-element object-id='Hbol-1' random-id='6735d617-52ab-5ca4-c570-ac370c894362'><marimo-text-area data-initial-value='&quot;&quot;' data-label='&quot;&lt;span class=&#92;&quot;markdown prose dark:prose-invert contents&#92;&quot;&gt;&lt;span class=&#92;&quot;paragraph&#92;&quot;&gt;Paste Input Data Here:&lt;/span&gt;&lt;/span&gt;&quot;' data-placeholder='&quot;Example: 1 2 ...&quot;' data-disabled='false' data-debounce='true' data-full-width='true' data-rows='6'></marimo-text-area></marimo-ui-element></div>"
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "1\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "MJUe",
+      "code_hash": "d5889c34c4a12348c915f26c28572c5d",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"result\">Result:</h3>\n<div class=\"language-text codehilite\"><pre><span></span><code>Waiting for input...\n</code></pre></div></span>"
+          }
+        }
+      ],
+      "console": []
+    }
+  ]
+}

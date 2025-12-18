@@ -1,0 +1,64 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.17.7"
+  },
+  "cells": [
+    {
+      "id": "MJUe",
+      "code_hash": "cdda3cfa55665ee061baa57b47e0ae58",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h1 id=\"falling-leaves-demo\">Falling Leaves Demo</h1>\n<span class=\"paragraph\">This notebook demonstrates a simple animation of falling leaves using matplotlib and numpy. Adjust the number of leaves and wind strength to see the effect.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Xref",
+      "code_hash": "023dbbf1fea3bb31d5121e69708b9ab8",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Adjust the sliders above to change the number of leaves and wind strength. The plot shows the final positions of the leaves after falling.</span>\n<span class=\"paragraph\">For a true animation, use a local Python environment with matplotlib's animation module.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Hbol",
+      "code_hash": "8c134a484cf2f26e448c83c9bb1259df",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "vblA",
+      "code_hash": "1c1664726203542097702166c50d9053",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "bkHC",
+      "code_hash": "93001e1b98cb8883bd6dda9863598e74",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "lEQa",
+      "code_hash": "ac801a5e75eebece146c74a47043fc3f",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "PKri",
+      "code_hash": "4ab77f5605119fa53cdbb036f0a80f07",
+      "outputs": [],
+      "console": []
+    }
+  ]
+}
